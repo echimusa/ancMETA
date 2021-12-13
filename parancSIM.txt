@@ -1,0 +1,41 @@
+#No space allowed. Speficy the full path.
+#Data directory
+Cagwas:BIPOLAR/dub.ps
+Sgwas:BIPOLAR/STUDIES/
+pathway:pathway/Homo-sapien_path.txt
+Faffy:Affymetrix.dat
+# Provide a LD file (Fld:xxx.ld) OR the genotype files ( Fgeno:BIPOLAR/xxx.geno and Fsnp:BIPOLAR/xxx.snp
+#Fgeno:BIPOLAR/SAC.geno
+#Fsnp:BIPOLAR/SAC.snp
+Fld:BIPOLAR/dub.net
+Fnetwork:Homo_sapiens-20121210.network
+#General Options
+LDcutoff:0.005   
+Pcutoff:0.05
+SNPtoGENE:20
+Path:YES
+#Gene Pvalues options: Fisher, gene_all,Simes, Smallest, Gwbon
+Gene_pv:gene_all
+#Gene-LD options: closest, zscore, maxscore
+Gene_LD:zscore
+#Significancy and pvalues correction
+#Possible option:fdr,BH,bonferroni,holm,hochberg,BY,sampling
+adjustPValues:sampling
+Sampling_size:116413
+#Possible Sampling option:smoother,bootstrap,permute
+pi0_method:bootstrap
+# Float between 0 and 1
+fdr_level:0.05
+robust:NO
+#Results options
+TOPScore:20
+#Specify the disease code ID under investigation check or include it in file pathway/disease_canidate_gene.txt
+Disease:ancdis_11101
+gene_disease_file:pathway/disease_canidate_gene.txt
+clear_stat:NO
+fast_mode:NO
+#Number of top genes or Sub-network to consider for plot
+nb_net:5
+# Sorting result per studies index, study 1 = 16, study 2 = 17, .....
+inxed_sort:16
+outfolder:OUT_SAC2/
